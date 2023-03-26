@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 29px;
+}
+
+/* global  */
+a {
+
+    text-decoration: none;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    grid-template-rows: 1fr 4fr 1.2fr 1.2fr;
+    grid-template-areas: "logo    logo     header"
+        "main    main     imgbox"
+        "quote   quote    imgbox"
+        "btn1    btn2     imgbox";
+}
+
+.logo {
+    background-color: #5dbcff;
+    grid-area: logo;
+    /* grid-area:  1 / 1 / 2 / 3; */
+    /* grid-row:  1 / 2;
+    grid-column: 1 / 3; */
+    display: flex;
+    align-items: center;
+    padding-left: 125px;
+}
+
+.logo a {
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.main {
+    background-color: rgb(255, 255, 255);
+    grid-area: main;
+    padding: 0px 125px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main h1 {
+    font-size: 36px;
+    line-height: 49px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    max-width: 290px;
+}
+
+
+
+.quote {
+    background-color: #5dbcff;
+    grid-area: quote;
+    padding-left: 140px;
+    display: flex;
+    align-items: center;
+}
+
+.quote h2 {
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 700;
+}
+
+.btn a {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.btn1 {
+    background-color: rgb(99, 232, 188);
+    grid-area: btn1;
+}
+
+
+
+.btn2 {
+    background-color: rgb(135, 167, 228);
+    grid-area: btn2;
+}
+
+
+
+
+header {
+    background-color: rgb(1, 133, 235);
+    grid-area: header;
+    /* grid-row:1 / 2 ;
+    grid-column:3 / 4 ; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li a {
+    color: white;
+    font-weight: 700;
+    padding: 30px 15px;
+}
+
+.img-box {
+    background-color: rgb(255, 255, 255);
+    grid-area: imgbox;
+    background: url(images/6912346.jpg) no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.img-box img {
+    width: 100%;
+}
+
+
+
