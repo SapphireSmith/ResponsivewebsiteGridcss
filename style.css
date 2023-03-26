@@ -148,3 +148,70 @@ header ul li a {
 
 
 
+/* code of media query from here */
+
+
+@media screen and (max-width:767px) {
+
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "logo logo"
+            "header header"
+            "imgbox imgbox"
+            "main main"
+            "quote quote"
+            "btn1 btn2";
+
+        grid-template-rows: 90px 50px 50vh auto auto 70px;
+    }
+
+    .logo {
+        padding: 0;
+        justify-content: center;
+    }
+
+    header {
+        padding: 0;
+        justify-content: center;
+    }
+
+    header ul li a{
+        padding: 13px 3 3px;
+    }
+    .main {
+        padding: 30px;
+    }
+    
+    .main h1 {
+        font-size: 28px;
+        line-height: 39px;
+        font-weight: 800;
+        margin-bottom: 13px;
+        max-width: 336px;
+    }
+
+    .quote {
+        padding: 20px 10px;
+    }
+
+    .quote h2 {
+        font-size: 29px;
+        line-height: 33px;
+        padding: 0px 48px;
+        font-weight: 700;
+    }
+
+    .img-box {
+        grid-area: imgbox   ;
+        background-image:url(images/3d-Charater-redHoodie-1.png);
+        overflow: hidden;
+        background-size: cover;
+    }
+
+    .btn a {
+        font-size: 16px;
+    }
+
+}
