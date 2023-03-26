@@ -34,7 +34,7 @@ a {
 }
 
 .logo {
-    background-color: #5dbcff;
+    background-color: rgb(40, 2, 2);
     grid-area: logo;
     /* grid-area:  1 / 1 / 2 / 3; */
     /* grid-row:  1 / 2;
@@ -42,17 +42,21 @@ a {
     display: flex;
     align-items: center;
     padding-left: 125px;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
 }
 
 .logo a {
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 24px;
     text-decoration: none;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
 }
 
 .main {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(41, 41, 41);
     grid-area: main;
     padding: 0px 125px;
     display: flex;
@@ -61,6 +65,7 @@ a {
 }
 
 .main h1 {
+    color: white;
     font-size: 36px;
     line-height: 49px;
     font-weight: 800;
@@ -68,10 +73,13 @@ a {
     max-width: 290px;
 }
 
+.main p{
+    color: white;
+}
 
 
 .quote {
-    background-color: #5dbcff;
+    background-color:rgb(78, 78, 78);
     grid-area: quote;
     padding-left: 140px;
     display: flex;
@@ -79,6 +87,7 @@ a {
 }
 
 .quote h2 {
+    color: rgb(241, 231, 231);
     font-size: 24px;
     line-height: 33px;
     font-weight: 700;
@@ -98,22 +107,26 @@ a {
 }
 
 .btn1 {
-    background-color: rgb(99, 232, 188);
+    background-color: rgb(16, 14, 14);
     grid-area: btn1;
+    transition-delay: 0.2s;
+    transition-duration: 0.1s;
 }
 
 
 
 .btn2 {
-    background-color: rgb(135, 167, 228);
+    background-color: rgb(16, 14, 14);
     grid-area: btn2;
+    transition-delay: 0.2s;
+    transition-duration: 0.1s;
 }
 
 
 
 
 header {
-    background-color: rgb(1, 133, 235);
+    background-color: rgb(40, 2, 2);
     grid-area: header;
     /* grid-row:1 / 2 ;
     grid-column:3 / 4 ; */
@@ -122,6 +135,8 @@ header {
     align-items: center;
     justify-content: flex-end;
     padding-right: 30px;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
 }
 
 header ul {
@@ -135,6 +150,9 @@ header ul li a {
     color: white;
     font-weight: 700;
     padding: 30px 15px;
+    transition-delay: 0.2s;
+    transition-duration: 0.5s;
+
 }
 
 .img-box {
@@ -149,14 +167,32 @@ header ul li a {
     width: 100%;
 }
 
-/* End of basic basic alingments */
+/* End of basic alingments */
 
 
-/* Hover effects and other things */
+/* Hover effects */
 
+.logo a:hover {
+    color: rgb(116, 211, 248);
+}
 
+header ul li a:hover {
+    color: rgb(116, 211, 248);
+}
 
+.btn a:hover {
+    background-color: rgb(56, 56, 56);
+    color: rgb(116, 211, 248);
+}
 
+.logo:hover {
+    background-color: rgb(16, 14, 14);
+}
+
+header:hover {
+    background-color: rgb(16, 14, 14);
+
+}
 
 
 /* code of media query from here */
@@ -186,13 +222,14 @@ header ul li a {
         justify-content: center;
     }
 
-    header ul li a{
+    header ul li a {
         padding: 13px 3 3px;
     }
+
     .main {
         padding: 30px;
     }
-    
+
     .main h1 {
         font-size: 28px;
         line-height: 39px;
@@ -213,8 +250,8 @@ header ul li a {
     }
 
     .img-box {
-        grid-area: imgbox   ;
-        background-image:url(images/3d-Charater-redHoodie-1.png);
+        grid-area: imgbox;
+        background-image: url(images/3d-Charater-redHoodie-1.png);
         overflow: hidden;
         background-size: cover;
     }
@@ -225,8 +262,11 @@ header ul li a {
 
 }
 
-@media screen and (min-width:769px) and (max-width:950px){
-    .logo ,  .main , .quote{
+@media screen and (min-width:769px) and (max-width:950px) {
+
+    .logo,
+    .main,
+    .quote {
         padding: 50px;
     }
 
